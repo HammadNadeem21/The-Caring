@@ -1565,7 +1565,7 @@ a {
     margin-top: 80px;
     padding: 30px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(0, 0, 0, 0.1);
+    /* background: rgba(0, 0, 0, 0.1); */
 }
 
 .footer-bottom p {
@@ -4442,3 +4442,218 @@ textarea {
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(11, 94, 134, 0.15);
 }
+
+/* ── Contact Page Specific Styles ── */
+.contact-hero-immersive {
+    min-height: 100vh;
+    padding: 200px 0 150px;
+    background: url("../images/new/TC_Images_ (1).png") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.contact-hero-immersive .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(8, 63, 91, 0.95) 0%, rgba(8, 63, 91, 0.8) 40%, rgba(8, 63, 91, 0.2) 100%);
+    z-index: 1;
+}
+
+.contact-hero-immersive .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+}
+
+.contact-hero-immersive .hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contact-hero-immersive .hero-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+}
+
+.contact-submit-btn-premium {
+    background: #1da1c9;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.contact-submit-btn-premium:hover {
+    background: #0b5e86;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(29, 161, 201, 0.3);
+}
+
+.map-container-premium {
+    height: 450px;
+    width: 100%;
+    filter: grayscale(1) invert(0.92) contrast(1.2);
+}
+
+.footer-logo-premium {
+    max-height: 60px;
+    filter: brightness(0) invert(1);
+}
+
+.accreditation-card-premium {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .contact-hero-immersive .hero-title {
+        font-size: 2.8rem;
+    }
+    .contact-hero-immersive {
+        padding: 150px 0 100px;
+        min-height: auto;
+    }
+}
+
+/* ── Global Premium Refactoring Styles ── */
+.z-index-2 { z-index: 2 !important; }
+
+.footer-logo-premium {
+    max-height: 60px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-phone-premium {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.accreditation-card-premium {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.accreditation-icon-premium {
+    font-size: 2.5rem;
+    color: #1da1c9;
+}
+
+.map-iframe-premium {
+    border: 0;
+}
+
+.btn-care-services-premium {
+    background: #1da1c9;
+    color: white !important;
+    padding: 18px 45px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all 0.5s ease;
+    box-shadow: 0 10px 20px rgba(29, 161, 201, 0.2);
+    display: inline-block;
+}
+
+.btn-care-services-premium:hover {
+    background: #ffffff;
+    color: #1da1c9 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.about-right-img-premium img {
+    border: 8px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+}
+
+.mission-heading-premium {
+    font-size: 3rem !important;
+    margin-top: 0 !important;
+}
+
+.section-desc-premium {
+    max-width: 100% !important;
+    color: #666 !important;
+}
+
+/* ── FAQ Premium Section ── */
+.faq-premium-section {
+    padding: 120px 0;
+    background: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 40px;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.faq-glass-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--e-global-color-secondary);
+}
+
+.faq-question {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--e-global-color-primary);
+    margin-bottom: 20px;
+    line-height: 1.4;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.faq-answer {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666666;
+    margin-bottom: 0;
+}
+
+/* ── FAQ Section Tag (Centered with lines) ── */
+.section-tag-faq {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--e-global-color-primary);
+    position: relative;
+    padding: 0 50px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.section-tag-faq::before,
+.section-tag-faq::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 1px;
+    background: var(--e-global-color-primary);
+    opacity: 0.6;
+}
+
+.section-tag-faq::before { left: -10px; }
+.section-tag-faq::after  { right: -10px; }
