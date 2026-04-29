@@ -650,7 +650,7 @@ a {
 .about-hero-immersive {
     min-height: 100vh;
     padding: 200px 0 150px;
-    background: url("../images/new/TC_Images_ (8).png") no-repeat center center;
+    background: url("../images/new/TC_Images_ (8).png") no-repeat top center;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -710,7 +710,7 @@ a {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url("../images/new/TC_Images_ (5).png") no-repeat center center;
+    background: url("../images/new/TC_Images_ (5).png") no-repeat top center;
     background-size: cover;
     position: relative;
     padding: 100px 0;
@@ -747,11 +747,11 @@ a {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(8, 63, 91, 0.9) 0%, rgba(5, 35, 49, 0.9) 100%), url("../images/new/TC_Images_ (6).png");
+    background: linear-gradient(135deg, rgba(8, 63, 91, 0.9) 0%, rgba(5, 35, 49, 0.5) 100%), url("../images/new/TC_image_11.jpeg");
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    filter: blur(2px);
+    background-position:top center;
+    /* background-attachment: fixed; */
+    filter: blur(0.5px);
     transform: scale(1.1); /* Prevent blur edges from showing */
     z-index: 1;
 }
@@ -998,7 +998,7 @@ a {
   position: relative;
   background-image: url('../images/new/TC_Images_ (4).png');
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
 }
 
@@ -1583,7 +1583,7 @@ a {
   background: url(../images/banner2-img.jpg) !important;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position:top center;
 }
 
 .sub-header-section .navbar-nav li .index2-navlink {
@@ -4087,9 +4087,9 @@ textarea {
 /* Section wrapper — background photo */
 .menu-section.menu-style-3-bg {
     position: relative;
-    background-image: url('../images/new/TC_Images_ (3).png');
+    background-image: url('../images/new/TC_image_12.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: top center;
     background-repeat: no-repeat;
     overflow: hidden;
     padding: 100px 0 110px;
@@ -4447,7 +4447,7 @@ textarea {
 .contact-hero-immersive {
     min-height: 100vh;
     padding: 200px 0 150px;
-    background: url("../images/new/TC_Images_ (1).png") no-repeat center center;
+    background: url("../images/new/TC_Images_ (1).png") no-repeat top center;
     background-size: cover;
     display: flex;
     align-items: center;
