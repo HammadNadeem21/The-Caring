@@ -4039,14 +4039,20 @@ textarea {
     z-index: 2;
 }
 
-/* Glassmorphic Navbar */
+/* White Navbar */
 .home-header-section3 .main-header {
-    background: rgba(255, 255, 255, 0.08) !important;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    background: var(--e-global-color-white) !important;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: 1px solid var(--e-global-color-very-light-gray);
+    box-shadow: 0 4px 20px rgba(11, 94, 134, 0.08);
     padding: 15px 0 !important;
+}
+
+/* Show original logo colours on white navbar (remove footer white-filter) */
+.home-header-section3 .main-header .navbar-logo-img {
+    filter: none !important;
+    max-height: 55px;
 }
 
 .home-header-section3 .hero-style-3 {
@@ -4064,20 +4070,27 @@ textarea {
     color: var(--e-global-color-white) !important;
 }
 
-/* Override contact button styling to match white on blue */
+/* CTA button — brand colours on white navbar */
 .home-header-section3 .btn-talk a.contact {
-    background: transparent !important;
-    border: 2px solid var(--e-global-color-white) !important;
+    background: var(--e-global-color-primary) !important;
+    border: 2px solid var(--e-global-color-primary) !important;
     color: var(--e-global-color-white) !important;
+    border-radius: 40px;
+    transition: all 0.3s ease;
 }
 .home-header-section3 .btn-talk a.contact:hover {
-    background: var(--e-global-color-white) !important;
-    color: var(--e-global-color-primary) !important;
+    background: var(--e-global-color-secondary) !important;
+    border-color: var(--e-global-color-secondary) !important;
+    color: var(--e-global-color-white) !important;
 }
 
+/* Nav links — dark primary on white navbar */
 .home-header-section3 .navbar-nav li a {
-    color: var(--e-global-color-white) !important;
+    color: var(--e-global-color-primary) !important;
     font-weight: 600;
+}
+.home-header-section3 .navbar-nav li a:hover {
+    color: var(--e-global-color-secondary) !important;
 }
 
 /* ═══════════════════════════════════════════════════
