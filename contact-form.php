@@ -5,15 +5,14 @@ $lastName = $_POST['lname'];
 $phone = $_POST['phone'];
 $comments = $_POST['message'];
 
-if (isset($name) && isset($phone) && isset($emailHelp)) {
+if (!empty($name) && !empty($phone) && !empty($emailHelp)) {
 	global $to_email, $vpb_message_body, $headers;
-	$to_email = "hammadnadeem.dev@gmail.com";
-	// $email_subject="Inquiry From Contact Page";
+	$to_email = "info@thecaring.co.uk";
+	$email_subject = "New Inquiry from " . $name . " " . $lastName;
 	$vpb_message_body = nl2br("Dear Admin,\n
 	The user whose detail is shown below has sent this message from " . $_SERVER['HTTP_HOST'] . " dated " . date('d-m-Y') . ".\n
 	
-	name: " . $name . "\n
-	Last Name: " . $lastName . "\n
+	Name: " . $name . " " . $lastName . "\n
 	Email Address: " . $emailHelp . "\n
     Phone: " . $phone . "\n
 
@@ -26,7 +25,7 @@ if (isset($name) && isset($phone) && isset($emailHelp)) {
 	$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
 	$headers .= "Message-ID: <" . time() . rand(1, 1000) . "@" . $_SERVER['SERVER_NAME'] . ">" . "\r\n";
 
-	if (@mail($to_email, $vpb_message_body, $headers)) {
+	if (@mail($to_email, $email_subject, $vpb_message_body, $headers)) {
 		$status = 'Success';
 		//Displays the success message when email message is sent
 		$output = "Congrats " . $name . ", your email message has been sent successfully! We will get back to you as soon as possible. Thanks.";
@@ -37,11 +36,8 @@ if (isset($name) && isset($phone) && isset($emailHelp)) {
 	}
 
 } else {
-
-	echo $name;
 	$status = 'error';
-	$output = "please fill require fields";
-
+	$output = "Please fill in all required fields (Name, Email, and Phone).";
 }
 echo json_encode(array('status' => $status, 'msg' => $output));
 
