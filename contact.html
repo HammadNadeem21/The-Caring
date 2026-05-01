@@ -161,45 +161,40 @@
             <!-- Right Side: Contact Form -->
             <div class="col-lg-7">
                 <div class="contact-form-glass" data-aos="fade-left">
-                    <form action="#">
+                    <form action="contact-form.php" method="POST" id="contactForm">
                         <div class="row">
                             <div class="col-md-6 mb-4">
                                 <div class="form-group custom-input">
-                                    <label>Full Name</label>
-                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                    <label>First Name</label>
+                                    <input type="text" name="fname" class="form-control" placeholder="First Name" required>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-4">
                                 <div class="form-group custom-input">
-                                    <label>Email Address</label>
-                                    <input type="email" class="form-control" placeholder="Email@domain.com" required>
+                                    <label>Last Name</label>
+                                    <input type="text" name="lname" class="form-control" placeholder="Last Name">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 mb-4">
                                 <div class="form-group custom-input">
-                                    <label>Phone (Optional)</label>
-                                    <input type="tel" class="form-control" placeholder="Enter phone number">
+                                    <label>Email Address</label>
+                                    <input type="email" name="email" class="form-control" placeholder="Email@domain.com" required>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-4">
                                 <div class="form-group custom-input">
-                                    <label>Service of Interest</label>
-                                    <select class="form-control select-input">
-                                        <option value="" disabled selected>Select Service</option>
-                                        <option value="care">Home Care</option>
-                                        <option value="companionship">Companionship</option>
-                                        <option value="assessment">Care Assessment</option>
-                                        <option value="other">Other Enquiry</option>
-                                    </select>
+                                    <label>Phone</label>
+                                    <input type="tel" name="phone" class="form-control" placeholder="Enter phone number" required>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group custom-input mb-4">
                             <label>Message</label>
-                            <textarea class="form-control" rows="4" placeholder="Write your message"></textarea>
+                            <textarea name="message" class="form-control" rows="4" placeholder="Write your message" required></textarea>
                         </div>
+                        <div id="formResponse" class="mb-3"></div>
                         <div class="contact-btn-wrapper">
                             <button type="submit" class="contact-submit-btn">
                                 Send Message <i class="fa-solid fa-arrow-right-long ms-2"></i>
@@ -368,6 +363,39 @@
             offset: 120,
             easing: 'ease-out-cubic',
             once: true
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#contactForm').on('submit', function(e) {
+                e.preventDefault();
+                var formData = $(this).serialize();
+                var $btn = $('.contact-submit-btn');
+                var $response = $('#formResponse');
+
+                $btn.prop('disabled', true).text('Sending...');
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'contact-form.php',
+                    data: formData,
+                    dataType: 'json',
+                    success: function(response) {
+                        if (response.status === 'Success') {
+                            $response.html('<div class="alert alert-success">' + response.msg + '</div>');
+                            $('#contactForm')[0].reset();
+                        } else {
+                            $response.html('<div class="alert alert-danger">' + response.msg + '</div>');
+                        }
+                    },
+                    error: function() {
+                        $response.html('<div class="alert alert-danger">An error occurred. Please try again later.</div>');
+                    },
+                    complete: function() {
+                        $btn.prop('disabled', false).html('Send Message <i class="fa-solid fa-arrow-right-long ms-2"></i>');
+                    }
+                });
+            });
         });
     </script>
 </body>

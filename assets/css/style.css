@@ -116,8 +116,8 @@ a {
 
 /****** headerm and banner section******/
 .header-top {
-  background: var(--e-global-color-white);
-  color: var(--e-global-color-text);
+  background: var(--e-global-color-primary) !important;
+  color: var(--e-global-color-white) !important;
   padding: 22px 0;
 }
 
@@ -129,6 +129,7 @@ a {
   font-weight: 400;
   display: inline;
   margin-left: 10px;
+  color: var(--e-global-color-white) !important;
 }
 
 .header-left a {
@@ -136,11 +137,11 @@ a {
   line-height: 24px;
   font-weight: 600;
   margin-left: 3px;
-  color: var(--e-global-color-text);
+  color: var(--e-global-color-white) !important;
 }
 
 .header-left .phone-icon {
-  background: var(--e-global-moderate-violet);
+  background: var(--e-global-color-white) !important;
   border-radius: 100px;
   width: 26px;
   height: 26px;
@@ -152,7 +153,7 @@ a {
 }
 
 .header-right .phone-icon {
-  background: var(--e-global-moderate-violet);
+  background: var(--e-global-color-white) !important;
   border-radius: 100px;
   width: 26px;
   height: 26px;
@@ -167,14 +168,14 @@ a {
 
 .header-right .phone-icon i {
   font-size: 12px;
-  color: var(--e-global-color-white);
+  color: var(--e-global-color-primary) !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 
 .header-left .phone-icon i {
   font-size: 12px;
-  color: var(--e-global-color-white);
+  color: var(--e-global-color-primary) !important;
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -191,7 +192,7 @@ a {
 }
 
 .header-right ul li i {
-  background: var(--e-global-moderate-violet);
+  background: var(--e-global-color-white) !important;
   border-radius: 100px;
   width: 26px;
   height: 26px;
@@ -201,7 +202,7 @@ a {
   justify-content: center;
   margin-left: 0px;
   font-size: 12px;
-  color: var(--e-global-color-white);
+  color: var(--e-global-color-primary) !important;
   vertical-align: middle;
   padding: 0 !important;
 }
@@ -2396,7 +2397,7 @@ a {
 .header-top1 .header-right .email-span {
   margin-left: 12px;
   margin-right: 22px;
-  color: var(--e-global-color-text);
+  color: var(--e-global-color-white) !important;
 }
 .header-top1 .header-right .email-span:hover{
   color: var(--e-global-color-secondary);
@@ -2406,7 +2407,7 @@ a {
 }
 .header-top1 .header-right .user-span {
   margin-left: 10px;
-  color: var(--e-global-dark-moderate-violet);
+  color: var(--e-global-color-white) !important;
 }
 
 .header-top1 .header-left .phone-icon i {
@@ -4060,13 +4061,13 @@ textarea {
     z-index: 2;
 }
 
-/* Glassy Navbar */
+/* Solid White Navbar */
 .home-header-section3 .main-header {
-    background: rgba(11, 94, 134, 0.6) !important;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     padding: 0 0 !important;
 }
 
@@ -4110,18 +4111,18 @@ textarea {
     color: var(--e-global-color-white) !important;
 }
 
-/* CTA button — contrast colours for white navbar */
+/* CTA button — primary colors for white navbar */
 .home-header-section3 .btn-talk a.contact {
-    background: var(--e-global-color-white) !important;
-    border: 2px solid var(--e-global-color-white) !important;
-    color: var(--e-global-color-text) !important;
+    background: var(--e-global-color-primary) !important;
+    border: 2px solid var(--e-global-color-primary) !important;
+    color: #ffffff !important;
     border-radius: 40px;
     transition: all 0.3s ease;
 }
 .home-header-section3 .btn-talk a.contact:hover {
     background: transparent !important;
-    border-color: var(--e-global-color-white) !important;
-    color: var(--e-global-color-white) !important;
+    border-color: var(--e-global-color-primary) !important;
+    color: var(--e-global-color-primary) !important;
 }
 
 /* Nav links — white on coloured navbar */
@@ -4131,7 +4132,7 @@ textarea {
 }
 .home-header-section3 .navbar-nav li a:hover,
 .home-header-section3 .navbar-nav li.active > a {
-    color: var(--e-global-color-mostly-white) !important;
+    color: var(--e-global-color-primary) !important;
 }
 
 /* Responsive Fixes for Section 3 */
