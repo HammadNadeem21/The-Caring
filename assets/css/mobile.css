@@ -1,4 +1,4 @@
-@media screen and (min-width: 1951px) {
+  @media screen and (min-width: 1951px) {
   .banner-img-content-about {
     left: 15px;
     top: 123px;
@@ -680,7 +680,7 @@ display: none;
   .navbar-collapse {
     position: absolute;
     right: 0px;
-    width: 30%;
+    width: 100%;
     top: 50px;
     z-index: 16;
     padding:0;
@@ -1650,9 +1650,22 @@ h2 {
 .banner-paragraph {
   padding: 0 0px;
 }
-  .header-top .user-li{
-    padding-left: 237px;
+
+  .header-top .user-li {
+    padding-left: 0;
+    margin-left: 0;
   }
+  .header-right ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+  .header-right ul li {
+    margin: 0 !important;
+  }
+
   .header-left p {
     padding: 38px 0;
     font-size: 14px;

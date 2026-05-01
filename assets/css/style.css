@@ -116,9 +116,9 @@ a {
 
 /****** headerm and banner section******/
 .header-top {
-  background: var(--e-global-dark-moderate-violet);
-  color: var(--e-global-color-white);
-  padding: 15px 0;
+  background: var(--e-global-color-white);
+  color: var(--e-global-color-text);
+  padding: 22px 0;
 }
 
 .header-left p {
@@ -136,37 +136,47 @@ a {
   line-height: 24px;
   font-weight: 600;
   margin-left: 3px;
-  color: var(--e-global-color-white);
+  color: var(--e-global-color-text);
 }
 
 .header-left .phone-icon {
   background: var(--e-global-moderate-violet);
-  padding: 9px 10p;
   border-radius: 100px;
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
   position: relative;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
 }
 
 .header-right .phone-icon {
   background: var(--e-global-moderate-violet);
-  padding: 9px 10p;
   border-radius: 100px;
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
   position: relative;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
   margin-right: 9px;
   margin-left: 27px;
+  vertical-align: middle;
 }
 
 .header-right .phone-icon i {
-  margin-left: 9px;
-  margin-top: 8px;
+  font-size: 12px;
+  color: var(--e-global-color-white);
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .header-left .phone-icon i {
-  margin-left: 7px;
-  margin-top: 7px;
+  font-size: 12px;
+  color: var(--e-global-color-white);
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .header-right ul {
@@ -183,18 +193,23 @@ a {
 .header-right ul li i {
   background: var(--e-global-moderate-violet);
   border-radius: 100px;
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
   position: relative;
-  text-align: center;
-  padding: 8px;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
   margin-left: 0px;
+  font-size: 12px;
+  color: var(--e-global-color-white);
+  vertical-align: middle;
+  padding: 0 !important;
 }
 
 .header-right .email-span {
   margin-left: 12px;
   margin-right: 22px;
-  color: var(--e-global-color-white);
+  color: var(--e-global-color-text);
 }
 
 .header-right .email-span:hover {
@@ -203,7 +218,7 @@ a {
 
 .header-right .user-span {
   margin-left: 10px;
-  color: var(--e-global-color-white);
+  color: var(--e-global-color-text);
 }
 
 .header-right .user-span:hover {
@@ -4006,7 +4021,7 @@ textarea {
 .home-header-section.home-header-section3 {
     position: relative;
     background: var(--e-global-color-primary) !important;
-    overflow: hidden;
+    /* Removed overflow: hidden so logo can overlap top box */
 }
 
 .home-header-section3 .header {
@@ -4045,20 +4060,39 @@ textarea {
     z-index: 2;
 }
 
-/* White Navbar */
+/* Glassy Navbar */
 .home-header-section3 .main-header {
-    background: var(--e-global-color-white) !important;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border-bottom: 1px solid var(--e-global-color-very-light-gray);
-    box-shadow: 0 4px 20px rgba(11, 94, 134, 0.08);
-    padding: 15px 0 !important;
+    background: rgba(11, 94, 134, 0.6) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 0 0 !important;
 }
 
-/* Show original logo colours on white navbar (remove footer white-filter) */
+/* Make the logo container hold horizontal space without forcing height */
+.home-header-section3 .main-header .navbar-brand {
+    position: relative;
+    width: 250px;
+    height: 100px; /* This expands the navbar so the bottom of the logo is inside */
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Position the logo absolutely so it can overlap without expanding the navbar */
+.home-header-section3 .main-header .navbar-brand figure {
+    position: absolute;
+    top: -20px; /* Overlaps white box by 20px */
+    left: 0;
+    margin: 0;
+}
+
+/* Show original logo colours and set large size */
 .home-header-section3 .main-header .navbar-logo-img {
     filter: none !important;
-    max-height: 55px;
+    max-height: 120px; /* 120px total height (20px overlapping top + 100px inside navbar) */
+    max-width: none;
 }
 
 .home-header-section3 .hero-style-3 {
@@ -4076,27 +4110,77 @@ textarea {
     color: var(--e-global-color-white) !important;
 }
 
-/* CTA button — brand colours on white navbar */
+/* CTA button — contrast colours for white navbar */
 .home-header-section3 .btn-talk a.contact {
-    background: var(--e-global-color-primary) !important;
-    border: 2px solid var(--e-global-color-primary) !important;
-    color: var(--e-global-color-white) !important;
+    background: var(--e-global-color-white) !important;
+    border: 2px solid var(--e-global-color-white) !important;
+    color: var(--e-global-color-text) !important;
     border-radius: 40px;
     transition: all 0.3s ease;
 }
 .home-header-section3 .btn-talk a.contact:hover {
-    background: var(--e-global-color-secondary) !important;
-    border-color: var(--e-global-color-secondary) !important;
+    background: transparent !important;
+    border-color: var(--e-global-color-white) !important;
     color: var(--e-global-color-white) !important;
 }
 
-/* Nav links — dark primary on white navbar */
+/* Nav links — white on coloured navbar */
 .home-header-section3 .navbar-nav li a {
-    color: var(--e-global-color-primary) !important;
+    color: var(--e-global-color-text) !important;
     font-weight: 600;
 }
-.home-header-section3 .navbar-nav li a:hover {
-    color: var(--e-global-color-secondary) !important;
+.home-header-section3 .navbar-nav li a:hover,
+.home-header-section3 .navbar-nav li.active > a {
+    color: var(--e-global-color-mostly-white) !important;
+}
+
+/* Responsive Fixes for Section 3 */
+@media (max-width: 991px) {
+    .home-header-section3 .main-header .navbar-brand {
+        width: 180px; /* Smaller logo container on mobile */
+        height: 70px;
+    }
+    .home-header-section3 .main-header .navbar-logo-img {
+        max-height: 80px;
+        top: 0;
+    }
+    .home-header-section3 .main-header .navbar-brand figure {
+        top: -10px;
+    }
+    .home-header-section3 .navbar-collapse {
+        background: rgba(11, 94, 134, 0.95) !important;
+        width: 100% !important;
+        left: 0;
+        top: 100%;
+        padding: 20px !important;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .home-header-section3 .navbar-nav li a {
+        color: #ffffff !important;
+        padding: 12px 15px !important;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        border-radius: 8px;
+        margin-bottom: 5px;
+    }
+    .home-header-section3 .navbar-nav li a:hover,
+    .home-header-section3 .navbar-nav li.active > a {
+        background: rgba(255, 255, 255, 0.15) !important;
+        color: var(--e-global-color-accent) !important;
+    }
+    .home-header-section3 .btn-talk {
+        margin-left: 0 !important;
+        margin-top: 15px;
+    }
+    .home-header-section3 .btn-talk a.contact {
+        width: 100%;
+        text-align: center;
+    }
+    .home-header-section3 .btn-talk a.contact:hover {
+        border: 2px solid white !important;
+        background: transparent !important;
+        color: white !important;
+    }
 }
 
 /* ═══════════════════════════════════════════════════
