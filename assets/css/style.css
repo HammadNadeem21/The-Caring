@@ -210,7 +210,7 @@ a {
 .header-right .email-span {
   margin-left: 12px;
   margin-right: 22px;
-  color: var(--e-global-color-text);
+  color: var(--e-global-color-white) !important;
 }
 
 .header-right .email-span:hover {
@@ -219,7 +219,7 @@ a {
 
 .header-right .user-span {
   margin-left: 10px;
-  color: var(--e-global-color-text);
+  color: var(--e-global-color-white) !important;
 }
 
 .header-right .user-span:hover {
