@@ -1655,9 +1655,16 @@ h2 {
 }
 .about-hero-immersive .hero-title,
 .services-hero-immersive .hero-title,
-.contact-hero-immersive .hero-title {
-  font-size: 2.2rem;
-  line-height: 1.2;
+.contact-hero-immersive .hero-title,
+.why-choose-heading,
+.mission-heading,
+.mission-heading-premium,
+.about-story-gradient .why-choose-heading,
+.contact-heading,
+.menu-section h2,
+.faq-premium-section h2 {
+  font-size: 2.2rem !important;
+  line-height: 1.2 !important;
 }
 .about-hero-immersive .hero-text,
 .services-hero-immersive .hero-text,
@@ -2554,9 +2561,16 @@ h2 {
 }
 .about-hero-immersive .hero-title,
 .services-hero-immersive .hero-title,
-.contact-hero-immersive .hero-title {
-  font-size: 1.8rem;
-  line-height: 1.2;
+.contact-hero-immersive .hero-title,
+.why-choose-heading,
+.mission-heading,
+.mission-heading-premium,
+.about-story-gradient .why-choose-heading,
+.contact-heading,
+.menu-section h2,
+.faq-premium-section h2 {
+  font-size: 1.8rem !important;
+  line-height: 1.2 !important;
 }
 .about-hero-immersive .hero-text,
 .services-hero-immersive .hero-text,
