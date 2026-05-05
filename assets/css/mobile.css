@@ -35,11 +35,11 @@
 
 @media screen and (max-width: 1440px) {
 
-  .home-header-section .home-banner-section {
-    padding: 110px 0 220px;
-  }
-  .home-header-section .home-banner-section {
-    padding: 25px 0 170px;
+  .home-header-section .home-banner-section,
+  .about-hero-immersive,
+  .services-hero-immersive,
+  .contact-hero-immersive {
+    padding: 110px 0 150px;
   }
   .home-header-section1 .home-banner-section1 {
     padding:0 0 400px;
@@ -171,8 +171,11 @@
   .main-header .navbar-brand img{
     width: 164px;
   }
-  .home-header-section .home-banner-section {
-    padding: 70px 0 233px;
+  .home-header-section .home-banner-section,
+  .about-hero-immersive,
+  .services-hero-immersive,
+  .contact-hero-immersive {
+    padding: 100px 0 150px;
   }
   .home-header-section1 .home-banner-section1 {
     padding: 70px 0 230px;
@@ -182,8 +185,8 @@
     margin-top: -137px;
 }
 h1 {
-  font-size: 62px;
-  line-height: 68px;
+  font-size: 3rem;
+  line-height: 1.2;
 }
 .about-offer-section {
   padding: 0 0px 96px !important;
@@ -862,16 +865,16 @@ display: none;
   }
 
   h1 {
-    font-size: 62px;
-    line-height: 62px;
+    font-size: 2.8rem;
+    line-height: 1.2;
   }
   .main-header {
     padding: 30px 0 0;
   }
 
 h1 {
-  font-size: 46px;
-  line-height: 52px;
+  font-size: 2.5rem;
+  line-height: 1.2;
 }
 .home-banner-section .banner-container-box .home-banner-text h1 {
   margin-bottom: 15px;
@@ -1634,9 +1637,9 @@ h2 {
 
 @media screen and (max-width: 767px) {
   h1 {
-    font-size: 42px;
-    line-height: 44px;
-}
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
   .home-banner-section .banner-container-box .home-banner-text h1 {
     padding: 0px 44px;
   }
@@ -1888,8 +1891,11 @@ h2 {
 .Carousel-Section .review-section-outer {
   margin: 0 18px;
 }
-.home-header-section .home-banner-section {
-  padding: 30px 0 100px;
+.home-header-section .home-banner-section,
+.about-hero-immersive,
+.services-hero-immersive,
+.contact-hero-immersive {
+  padding: 55px 0 100px;
 }
 .home-header-section1 .home-banner-section1 {
   padding: 30px 0 725px;
@@ -2519,12 +2525,12 @@ h2 {
     line-height: 24px;
   }
   h1 {
-    font-size: 34px;
-    line-height: 38px;
+    font-size: 1.8rem;
+    line-height: 1.2;
     letter-spacing: 0.2px;
     word-spacing: 0;
     padding: 0;
-}
+  }
 .home-banner-section .banner-container-box .home-banner-text .banner-paragraph {
   font-size: 16px;
   line-height: 26px;
@@ -2545,7 +2551,10 @@ h2 {
     margin-bottom: 18px;
     padding: 0 10px;
   }
-  .home-header-section .home-banner-section {
+  .home-header-section .home-banner-section,
+  .about-hero-immersive,
+  .services-hero-immersive,
+  .contact-hero-immersive {
     padding: 56px 0 70px;
 }
   .nav-link {
